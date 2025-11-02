@@ -212,92 +212,203 @@ describe("Suíte de Testes Fraca para 50 Operações Aritméticas", () => {
   test("50. deve calcular a metade de um número", () => {
     expect(metade(20)).toBe(10);
   });
-  test("[NOVO] isMaiorQue - deve matar o mutante de igualdade (>=)", () => {
+  test("51. isMaiorQue - deve matar o mutante de igualdade (>=)", () => {
     expect(isMaiorQue(5, 5)).toBe(false);
   });
-  test("[NOVO] celsiusParaFahrenheit - deve matar o mutante de multiplicação", () => {
+  test("52. celsiusParaFahrenheit - deve matar o mutante de multiplicação", () => {
     expect(celsiusParaFahrenheit(100)).toBe(212);
   });
-  test("[NOVO] medianaArray - deve lançar erro para array vazio", () => {
+  test("53 medianaArray - deve lançar erro para array vazio", () => {
     expect(() => medianaArray([])).toThrow("Array vazio не possui mediana.");
   });
 
-  test("[NOVO] 6. raizQuadrada - deve lançar erro para números negativos", () => {
+  test("54. raizQuadrada - deve lançar erro para números negativos", () => {
     expect(() => raizQuadrada(-16)).toThrow(
       "Não é possível calcular a raiz quadrada de um número negativo."
     );
   });
 
-  test("[NOVO] 8. fatorial - deve calcular 0! e 1!", () => {
+  test("55. fatorial - deve calcular 0! e 1!", () => {
     expect(fatorial(0)).toBe(1);
     expect(fatorial(1)).toBe(1);
   });
 
-  test("[NOVO] 8. fatorial - deve lançar erro para números negativos", () => {
+  test("56. fatorial - deve lançar erro para números negativos", () => {
     expect(() => fatorial(-1)).toThrow(
       "Fatorial não é definido para números negativos."
     );
   });
 
-  test("[NOVO] 9. mediaArray - deve retornar 0 para array vazio", () => {
+  test("57. mediaArray - deve retornar 0 para array vazio", () => {
     expect(mediaArray([])).toBe(0);
   });
 
-  test("[NOVO] 11. maximoArray - deve lançar erro para array vazio", () => {
+  test("58. maximoArray - deve lançar erro para array vazio", () => {
     expect(() => maximoArray([])).toThrow(
       "Array vazio не possui valor máximo."
     );
   });
 
-  test("[NOVO] 12. minimoArray - deve lançar erro para array vazio", () => {
+  test("59. minimoArray - deve lançar erro para array vazio", () => {
     expect(() => minimoArray([])).toThrow(
       "Array vazio не possui valor mínimo."
     );
   });
 
-  test("[NOVO] 14. arredondar - deve arredondar um número para baixo", () => {
+  test("60. arredondar - deve arredondar um número para baixo", () => {
     expect(arredondar(9.2)).toBe(9);
   });
 
-  test("[NOVO] 15. isPar - deve retornar true para 0", () => {
+  test("61. isPar - deve retornar true para 0", () => {
     expect(isPar(0)).toBe(true);
   });
 
-  test("[NOVO] 16. isImpar - deve retornar false para 0", () => {
+  test("62. isImpar - deve retornar false para 0", () => {
     expect(isImpar(0)).toBe(false);
   });
 
-  test("[NOVO] 33. isPrimo - deve retornar false para 0, 1 e não-primos", () => {
+  test("63. isPrimo - deve retornar false para 0, 1 e não-primos", () => {
     expect(isPrimo(0)).toBe(false);
     expect(isPrimo(1)).toBe(false);
     expect(isPrimo(4)).toBe(false);
   });
 
-  test("[NOVO] 37. isDivisivel - deve retornar false quando não é divisível", () => {
+  test("64. isDivisivel - deve retornar false quando não é divisível", () => {
     expect(isDivisivel(10, 3)).toBe(false);
   });
 
-  test("[NOVO] 40. inverso - deve lançar erro para 0", () => {
+  test("65. inverso - deve lançar erro para 0", () => {
     expect(() => inverso(0)).toThrow("Não é possível inverter o número zero.");
   });
 
-  test("[NOVO] 44. isMaiorQue - deve matar o mutante de igualdade (>=)", () => {
+  test("66. isMaiorQue - deve matar o mutante de igualdade (>=)", () => {
     expect(isMaiorQue(5, 5)).toBe(false);
   });
 
-  test("[NOVO] 45. isMenorQue - deve matar o mutante de igualdade (<=)", () => {
+  test("67. isMenorQue - deve matar o mutante de igualdade (<=)", () => {
     expect(isMenorQue(5, 5)).toBe(false);
   });
 
-  test("[NOVO] 46. isEqual - deve retornar false para números diferentes", () => {
+  test("68. isEqual - deve retornar false para números diferentes", () => {
     expect(isEqual(7, 8)).toBe(false);
   });
 
-  test("[NOVO] 47. medianaArray - deve calcular a mediana de um array par", () => {
+  test("69. medianaArray - deve calcular a mediana de um array par", () => {
     expect(medianaArray([1, 2, 3, 4])).toBe(2.5);
   });
 
-  test("[NOVO] 47. medianaArray - deve lançar erro para array vazio", () => {
+  test("70. medianaArray - deve lançar erro para array vazio", () => {
     expect(() => medianaArray([])).toThrow("Array vazio не possui mediana.");
+  });
+
+  test("71. produtoArray - deve retornar 1 para array vazio", () => {
+    expect(produtoArray([])).toBe(1);
+  });
+
+  test("72. clamp - deve retornar o valor mínimo", () => {
+    expect(clamp(-5, 0, 10)).toBe(0);
+  });
+
+  test("73. clamp - deve retornar o valor máximo", () => {
+    expect(clamp(15, 0, 10)).toBe(10);
+  });
+
+  test("74. medianaArray - deve funcionar com array não ordenado", () => {
+    expect(medianaArray([5, 1, 3])).toBe(3);
+  });
+
+  test("75. raizQuadrada - deve lançar erro para números negativos", () => {
+    expect(() => raizQuadrada(-16)).toThrow(
+      "Não é possível calcular a raiz quadrada de um número negativo."
+    );
+  });
+
+  test("76. fatorial - deve calcular 0! e 1!", () => {
+    expect(fatorial(0)).toBe(1);
+    expect(fatorial(1)).toBe(1);
+  });
+
+  test("77. fatorial - deve lançar erro para números negativos", () => {
+    expect(() => fatorial(-1)).toThrow(
+      "Fatorial não é definido para números negativos."
+    );
+  });
+
+  test("78. mediaArray - deve retornar 0 para array vazio", () => {
+    expect(mediaArray([])).toBe(0);
+  });
+
+  test("79. maximoArray - deve lançar erro para array vazio", () => {
+    expect(() => maximoArray([])).toThrow(
+      "Array vazio не possui valor máximo."
+    );
+  });
+
+  test("80. minimoArray - deve lançar erro para array vazio", () => {
+    expect(() => minimoArray([])).toThrow(
+      "Array vazio не possui valor mínimo."
+    );
+  });
+
+  test("81. arredondar - deve arredondar um número para baixo", () => {
+    expect(arredondar(9.2)).toBe(9);
+  });
+
+  test("82. isPar - deve retornar false para um número ímpar", () => {
+    expect(isPar(3)).toBe(false);
+  });
+
+  test("83. isImpar - deve retornar false para um número par", () => {
+    expect(isImpar(4)).toBe(false);
+  });
+
+  test("84. isPrimo - deve retornar false para 0, 1 e não-primos", () => {
+    expect(isPrimo(0)).toBe(false);
+    expect(isPrimo(1)).toBe(false);
+    expect(isPrimo(4)).toBe(false);
+  });
+
+  test("85. produtoArray - deve retornar 1 para array vazio", () => {
+    expect(produtoArray([])).toBe(1);
+  });
+
+  test("86. clamp - deve testar os limites min e max", () => {
+    expect(clamp(-5, 0, 10)).toBe(0);
+    expect(clamp(15, 0, 10)).toBe(10);
+  });
+
+  test("87. isDivisivel - deve retornar false quando não é divisível", () => {
+    expect(isDivisivel(10, 3)).toBe(false);
+  });
+
+  test("88. inverso - deve lançar erro para 0", () => {
+    expect(() => inverso(0)).toThrow("Não é possível inverter o número zero.");
+  });
+
+  test("89. isMaiorQue - deve matar o mutante de igualdade (>=)", () => {
+    expect(isMaiorQue(5, 5)).toBe(false);
+  });
+
+  test("90. isMenorQue - deve matar o mutante de igualdade (<=)", () => {
+    expect(isMenorQue(5, 5)).toBe(false);
+  });
+
+  test("91. isEqual - deve retornar false para números diferentes", () => {
+    expect(isEqual(7, 8)).toBe(false);
+  });
+
+  test("92. medianaArray - deve calcular a mediana de um array par", () => {
+    expect(medianaArray([1, 2, 3, 4])).toBe(2.5);
+  });
+
+  test("93. medianaArray - deve lançar erro para array vazio", () => {
+    expect(() => medianaArray([])).toThrow("Array vazio не possui mediana.");
+  });
+
+  test("94. medianaArray - deve funcionar com array não ordenado", () => {
+    expect(medianaArray([5, 1, 3])).toBe(3);
+  });
+  test("95. raizQuadrada - deve lidar com 0 corretamente", () => {
+    expect(raizQuadrada(0)).toBe(0);
   });
 });
